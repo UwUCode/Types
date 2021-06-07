@@ -1,0 +1,19 @@
+{
+    "extends": "@uwu-codes/tsconfig",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "declaration": true,
+        "inlineSourceMap": false
+    },
+    "include": [
+        "*.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "out",
+        "tmp",
+        "logs",
+        "test"
+    ]
+}

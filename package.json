@@ -1,0 +1,36 @@
+{
+  "name": "@uwu-codes/types",
+  "version": "1.0.0",
+  "description": "My utility typings.",
+  "types": "index.d.ts",
+  "scripts": {
+    "lint": "eslint . --ext .ts --fix"
+  },
+  "author": "Donovan_DMC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UWUCode/Types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UWUCode/Types/issues"
+  },
+  "homepage": "https://github.com/UWUCode/Types#readme",
+  "dependencies": {
+    "@types/node": "^15.12.1",
+    "@uwu-codes/eslint-config": "^1.0.18",
+    "@uwu-codes/tsconfig": "^1.0.1"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.x",
+    "npm": ">=7.x"
+  },
+  "os": [
+    "linux"
+  ],
+  "engineStrict": true
+}
