@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My utility typings.",
   "types": "index.d.ts",
   "scripts": {
@@ -26,7 +26,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=16.x",
+    "node": ">=15.x",
     "npm": ">=7.x"
   },
   "os": [
