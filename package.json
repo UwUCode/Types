@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "My utility typings.",
   "types": "index.d.ts",
   "scripts": {
@@ -30,7 +30,8 @@
     "npm": ">=7.x"
   },
   "os": [
-    "linux"
+    "linux",
+    "win32"
   ],
   "engineStrict": true
 }
