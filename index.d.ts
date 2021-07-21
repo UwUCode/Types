@@ -24,7 +24,7 @@ declare namespace Types {
 	export type SomeRequired<T, K extends keyof T = never> = Partial<Omit<T, K>> & Required<Pick<T, K>>;
 	export type DeepSomePartial<T, R extends keyof T = never> = DeepSomeOptional<T, R>;
 	export type DeepPartial<T> = {
-		[P in keyof T]?: Partial<T[P]>;
+		[P in keyof T]?: DeepPartial<T[P]>;
 	};
 	export type ThenArg<T> = T extends PromiseLike<infer U> ? U : T;
 	export type ThenReturnType<T extends (...args: any) => any> = ThenArg<ReturnType<T>>;
