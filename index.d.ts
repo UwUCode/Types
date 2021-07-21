@@ -20,7 +20,8 @@ declare namespace Types {
 	export type DeepWithOptional<T, O extends keyof T> = Omit<T, O> & Partial<Pick<T, O>>;
 	export type SomeOptional<T, R extends keyof T = never> = WithOptional<T, keyof Without<T, R>>;
 	export type DeepSomeOptional<T, R extends keyof T = never> = DeepWithOptional<T, keyof Without<T, R>>;
-	export type SomePartial<T, R extends keyof T = never> = SomeOptional<T, R>;
+	export type SomePartial<T, K extends keyof T = never> = Omit<T, K> & Partial<Pick<T, K>>;
+	export type SomeRequired<T, K extends keyof T = never> = Partial<Omit<T, K>> & Required<Pick<T, K>>;
 	export type DeepSomePartial<T, R extends keyof T = never> = DeepSomeOptional<T, R>;
 	export type DeepPartial<T> = {
 		[P in keyof T]?: Partial<T[P]>;
