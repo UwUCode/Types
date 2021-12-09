@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/types",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "My utility typings.",
   "types": "index.d.ts",
   "scripts": {
@@ -17,21 +17,21 @@
   },
   "homepage": "https://github.com/UWUCode/Types#readme",
   "dependencies": {
-    "@types/node": "^15.12.5",
-    "@uwu-codes/eslint-config": "^1.0.18",
-    "@uwu-codes/tsconfig": "^1.0.1"
+    "@types/node": "^16.11.12",
+    "@uwu-codes/eslint-config": "^1.0.31",
+    "@uwu-codes/tsconfig": "^1.0.1",
+    "typescript": "^4.5.2"
   },
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "engines": {
-    "node": ">=15.x",
+    "node": ">=16.x",
     "npm": ">=7.x"
   },
   "os": [
     "linux",
     "win32"
-  ],
-  "engineStrict": true
+  ]
 }

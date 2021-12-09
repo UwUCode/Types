@@ -43,14 +43,17 @@ declare namespace Types {
 	} extends { [_ in keyof T]: infer U } ? U : never;
 	export type AnyObject<T = unknown> = Record<string, T>;
 	export type AnyFunction<A extends Array<unknown> = Array<unknown>, B = unknown> = (...args: A) => B;
-	export type ModuleImport<T> = Record<"default", T>;
+	export type ModuleImport<T> = Record<"default", T> | T;
 	export type PartialRecord<K extends string | number | symbol, T> = Partial<Record<K, T>>;
 	export type KeysOfUnion<T> = T extends T ? keyof T : never;
 	export type ValuesOfUnion<T> = T extends T ? T[keyof T] : never;
 	export type Writeable<T extends { [k in string | number | symbol]: unknown; }, K extends (string | number | symbol) = keyof T> = {
-		[P in K]: T[P];
+		-readonly [P in K]: T[P];
 	};
-	type DeepUnion<T, V> = {
+	export type DeepWriteable<T> = {
+		-readonly [P in keyof T]: DeepWriteable<T[P] extends Array<any> ? T[P][number] : T[P]>;
+	};
+	export type DeepUnion<T, V> = {
 		[P in keyof T]: DeepUnion<T[P], V> | V;
 	};
 	export type DeepRequired<T> = {
