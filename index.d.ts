@@ -61,6 +61,8 @@ declare namespace Types {
 	};
 	export type DataTypes<T, O extends (string | number) = never> = Omit<WithoutFunctions<{ [K in keyof T]: T[K]; }>, O>;
 	export type EditTypes<T, O extends (string | number) = never> = DeepPartial<DataTypes<T, O>>;
+    // the interface, mutual properties, partial only, required only
+    export type PartiallyRequired<TYPE, MUTUAL extends keyof TYPE, PARTONLY extends keyof TYPE = never, REQONLY extends keyof TYPE = never> = Omit<Partial<TYPE>, MUTUAL | PARTONLY> & Required<Pick<TYPE, MUTUAL | REQONLY>>;
 }
 
 export = Types;

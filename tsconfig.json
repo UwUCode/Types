@@ -1,19 +1,10 @@
 {
-    "extends": "@uwu-codes/tsconfig",
-    "compilerOptions": {
-        "baseUrl": ".",
-        "declaration": true,
-        "inlineSourceMap": false
-    },
-    "include": [
-        "*.d.ts"
-, "index.d.ts"    ],
-    "exclude": [
-        "node_modules",
-        "build",
-        "out",
-        "tmp",
-        "logs",
-        "test"
-    ]
+  "extends": "@uwu-codes/tsconfig/esm",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "inlineSourceMap": false
+  },
+  "include": ["index.d.ts"],
+  "exclude": ["node_modules"]
 }
