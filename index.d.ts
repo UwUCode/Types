@@ -63,7 +63,7 @@ declare namespace Types {
 	export type EditTypes<T, O extends (string | number) = never> = DeepPartial<DataTypes<T, O>>;
     // the interface, mutual properties, partial only, required only
     export type PartiallyRequired<TYPE, MUTUAL extends keyof TYPE, PARTONLY extends keyof TYPE = never, REQONLY extends keyof TYPE = never> = Omit<Partial<TYPE>, MUTUAL | PARTONLY> & Required<Pick<TYPE, MUTUAL | REQONLY>>;
-    export type SomeRequired<TYPE, REQUIRED extends keyof TYPE, EXCLUDE extends keyof TYPE = never> = Omit<TYPE, EXCLUDE | REQUIRED> & Required<Pick<TYPE, REQUIRED>>;
+    export type SomeRequiredExtended<TYPE, REQUIRED extends keyof TYPE, EXCLUDE extends keyof TYPE = never> = Omit<TYPE, EXCLUDE | REQUIRED> & Required<Pick<TYPE, REQUIRED>>;
 }
 
 export = Types;
