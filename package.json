@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/types",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "My utility typings.",
   "types": "index.d.ts",
   "scripts": {
